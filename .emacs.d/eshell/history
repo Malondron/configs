@@ -1,0 +1,128 @@
+ls
+cd ..
+ls
+cd img/
+ls
+cd ..
+ls
+cd js/
+ls
+cd ..
+cd ..
+cd ..
+ls
+cd classes/
+ls
+cd ..
+cd lib/
+ls
+cd ..
+ls
+cd src/
+ls
+cd noirweb/
+ls
+cd views/
+ls
+cd .. 
+cd models/
+ls
+ls
+cd ..
+ls
+cp c:/Projects/skylight.zip z:/Temp/
+cd q:
+cd ..
+cd ..
+cd ..
+cd ..
+find --help
+find * -name 'Skylight.doc' 
+cd c:
+cp c:/xampp/htdocs/js/orders.js c:/projs/noirweb/resources/public/js/
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd Users/Andreas/AppData/Local/temp/idamod-deb/
+c:/Programs/ALLEGRO/IdaSolver.exe  i=ida_lisp
+Too many turnsls
+cd
+cd Users/Andreas/Desktop/msitest/IDAICEedu/
+ls /l
+ls -s
+ls -l
+ls -t
+ls //help
+ls --help
+ls -c
+ls /lt
+ls -lt
+ls -lt *.msi
+cp IDAICEedu-TMMittelhessen.wxs IDAICEedu-STU.wxs
+candle IDAICEedu-STU.wxs 
+light IDAICEedu-STU.wixobj 
+candle IDAICEedu-STU.wxs 
+light IDAICEedu-STU.wixobj 
+./sign.bat IDAICEedu-STU.msi 
+cp IDAICEedu-STU.msi z:/Temp/
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd Projects/halton_mod/
+ls
+cp hxhta_halton.nmf hxhta_halton_new.nmf
+cd c:
+mkdir translate_iwec
+cd translate_iwec/
+cp e:/IWEC2\ Data\ Files/WMO\ Region\ 6\ Europe/SWE_* .
+l
+ls
+gunzip *.zip
+unzip
+unzip *.zip
+ls
+gzipSWE_HOLMOGADD_022880_IW2.zip            SWE_STOCKHOLM-ARLANDA_024600_IW2.zip
+gzip
+cd c:
+ls
+gzip -d *.zip
+ls
+lsSWE_HAPARANDA_021960_IW2.zip            SWE_SARNA_023160_IW2.zip
+ls -l
+lsSWE_HAPARANDA_021960_IW2.zip            SWE_SARNA_023160_IW2.zipgzip SWE_VISBY_025900_IW2.zip
+ls
+gzip -d SWE_VISBY_025900_IW2.zip
+ls
+cd c:
+ls
+gzip -d SWE_VISBY_025900_IW2.zip
+ls
+unzip *.zip
+ls
+ls
+mv *.CSV *.IW2
+cp *.CSV *.IW2
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd Users/Andreas/Desktop/msitest/IDAICEedu/
+ls
+cp IDAICEedu-STU.wxs IDAICEedu-HIOA.wxs
+candle IDAICEedu-HIOA.wxs 
+light IDAICEedu-HIOA.wixobj 
+sign IDAICEedu-HIOA.msi 
+ls
+./sign.bat IDAICEedu-HIOA.wxs
+cp IDAICEedu-HIOA.msi z:/www.equaonline.com\ \(APPSERVER3\)/temp/
+cp IDAICEedu-HIOA.msi z:/
+ls
+cp En_AdaptThComf.nmf En_EstimateSlidingAvgTExt.nmf
+cp En_AdaptThComf.nmf En_BuiThSignature.nmf
+cp En_AdaptThComf.nmf En_BlindsControl.nmf
+mv En_BlindsControl.nmf En_BlindsControls.nmf
