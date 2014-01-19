@@ -1,0 +1,42 @@
+background yes
+use_xft yes
+xftfont 123:size=8
+xftalpha 1
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 250
+maximum_width 250
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color white
+default_shade_color black
+default_outline_color white
+alignment bottom_left
+gap_x 8
+gap_y 165
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+override_utf8_locale yes
+use_spacer right
+text_buffer_size 256
+draw_graph_borders no
+     
+     
+TEXT
+${if_running banshee}${font}${color wheat3}MUSIC ${color azure} ${stippled_hr}$font${color MintCream}${endif}
+
+${if_running banshee}${alignc}${exec banshee --query-artist | cut -f2- -d" "}${endif}
+${if_running banshee}${alignc}${exec banshee --query-title | cut -f2- -d" "}${endif}
+${if_running banshee}${alignc}${exec banshee --query-album | cut -f2- -d" "}${endif}
+${if_running banshee}${alignc}${exec ~/.scripts/banshee.sh position}/${exec ~/.scripts/banshee.sh duration}${endif}
+
+${if_running banshee}${execbar ~/.scripts/banshee.sh progress}$color${endif}

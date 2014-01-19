@@ -62,7 +62,7 @@ double_buffer yes
 TEXT
 ${font}${color wheat3}NETWORK (GENERAL)${color azure} ${stippled_hr}${color MintCream}
 Active Interface ${alignr}$gw_iface
-Public IP${alignr}${execi 30 ~/.conky_scripts/ip.sh}
+#Public IP${alignr}${execi 30 ~/.conky_scripts/ip.sh}
 Gateway IP ${alignr}$gw_ip
 DNS ${alignr}$nameserver
 #TOR Status ${alignr}${if_running tor} Active${else}Disabled${endif}
