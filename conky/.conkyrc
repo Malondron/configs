@@ -1,0 +1,102 @@
+# Conky, a system monitor, based on torsmo
+#
+# Any original torsmo code is licensed under the BSD license
+#
+# All code written since the fork of torsmo is licensed under the GPL
+#
+# Please see COPYING for details
+#
+# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+# All rights reserved.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+alignment top_left
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color black
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+maximum_width 175
+use_xft yes
+#xftfont DejaVu Sans Mono:size=10
+xftfont 123:size=8
+gap_x 8
+gap_y 30
+override_utf8_locale yes
+minimum_size 5 5
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+background yes
+own_window yes
+own_window_class Conky
+own_window_type override
+own_window_transparent yes
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer yes
+show_graph_scale no
+show_graph_range no
+double_buffer yes
+
+TEXT
+${font}${color wheat3}NETWORK (GENERAL)${color azure} ${stippled_hr}${color MintCream}
+Active Interface ${alignr}$gw_iface
+Public IP${alignr}${execi 30 ~/.conky_scripts/ip.sh}
+Gateway IP ${alignr}$gw_ip
+DNS ${alignr}$nameserver
+TOR Status ${alignr}${if_running tor} Active${else}Disabled${endif}
+Firewall Status ${alignr}${if_existing  /var/run/firewall }Active${else}${alignr}Disabled$endif
+
+${font}${color wheat3}NETWORK (WIRED) ${color azure} ${stippled_hr}$font${color MintCream}
+${if_up eth0}IP on eth0${alignr}${addr eth0}${endif}
+${if_up eth0}${endif}
+${if_up eth0}Down${alignr}${downspeed eth0} kb/s${endif}
+${if_up eth0}Up${alignr}${upspeed eth0} kb/s${endif}
+${if_up eth0}${endif}
+${if_up eth0}Downloaded:${alignr}${totaldown eth0}${endif}
+${if_up eth0}Uploaded:${alignr}${totalup eth0}${endif}
+
+${if_up eth1}${font}${color wheat3}NETWORK (WIRELESS) ${color azure} ${stippled_hr}${endif}
+${if_up eth1}$font${color MintCream}IP on eth1${alignr}${addr wlan0}${endif}
+${if_up eth1}${endif}
+${if_up eth1}Wireless ESSID${alignr}${wireless_essid eth1}${endif}
+${if_up eth1}Wireless BSSID${alignr}${wireless_ap eth1}${endif}
+${if_up eth1}${endif}
+${if_up eth1}Connection Quality${alignr}${wireless_link_qual_perc eth1}%${endif}
+${if_up eth1}${endif}
+${if_up eth1}Wireless Mode${alignr}${wireless_mode eth1}${endif}
+${if_up eth1}${if_up mon0}Monitor Mode ${alignr} Active${else}Monitor Mode${alignr}Disabled${endif}${endif}
+${if_up eth1}${endif}
+${if_up eth1}Down${alignr}${downspeed eth1} kb/s${endif}
+${if_up eth1}Up${alignr}${upspeed eth1} kb/s${endif}
+${if_up eth1}${endif}
+${if_up eth1}Downloaded:${alignr} ${totaldown eth1}${endif}
+${if_up eth1}Uploaded:${alignr} ${totalup eth1}${endif}
+${if_running banshee}${font sans-serif:bold:size=8}Banshee $hr
+${font sans-serif:normal:size=8}${color a3a39d}
+${alignc}${exec banshee --query-artist | cut -f2- -d" "}
+${alignc}${exec banshee --query-title | cut -f2- -d" "}
+${alignc}${exec banshee --query-album | cut -f2- -d" "}
+${alignc}${exec ~/.scripts/banshee.sh position}/${exec ~/.scripts/banshee.sh duration}
+${execbar ~/.scripts/banshee.sh progress}$color
