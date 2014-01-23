@@ -58,9 +58,11 @@ use_spacer yes
 show_graph_scale no
 show_graph_range no
 double_buffer yes
+color1 goldenrod
+color2 wheat3
 
 TEXT
-${font}${color wheat3}NETWORK (GENERAL)${color azure} ${stippled_hr}${color MintCream}
+${font}${color1}NETWORK (GENERAL)${color1} ${stippled_hr}${color2}
 Active Interface ${alignr}$gw_iface
 #Public IP${alignr}${execi 30 ~/.conky_scripts/ip.sh}
 Gateway IP ${alignr}$gw_ip
@@ -68,7 +70,7 @@ DNS ${alignr}$nameserver
 #TOR Status ${alignr}${if_running tor} Active${else}Disabled${endif}
 #Firewall Status ${alignr}${if_existing  /var/run/firewall }Active${else}${alignr}Disabled$endif
 
-${font}${color wheat3}NETWORK (WIRED) ${color azure} ${stippled_hr}$font${color MintCream}
+${font}${color1}NETWORK (WIRED) ${color1} ${stippled_hr}$font${color2}
 ${if_up eth0}IP on eth0${alignr}${addr eth0}${endif}
 ${if_up eth0}${endif}
 ${if_up eth0}Down${alignr}${downspeed eth0} kb/s${endif}
@@ -77,8 +79,8 @@ ${if_up eth0}${endif}
 ${if_up eth0}Downloaded:${alignr}${totaldown eth0}${endif}
 ${if_up eth0}Uploaded:${alignr}${totalup eth0}${endif}
 
-${if_up eth1}${font}${color wheat3}NETWORK (WIRELESS) ${color azure} ${stippled_hr}${endif}
-${if_up eth1}$font${color MintCream}IP on eth1${alignr}${addr wlan0}${endif}
+${if_up eth1}${font}${color1}NETWORK (WIRELESS) ${color1} ${stippled_hr}${endif}
+${if_up eth1}$font${color2}IP on eth1${alignr}${addr wlan0}${endif}
 ${if_up eth1}${endif}
 ${if_up eth1}Wireless ESSID${alignr}${wireless_essid eth1}${endif}
 ${if_up eth1}Wireless BSSID${alignr}${wireless_ap eth1}${endif}

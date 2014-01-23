@@ -1,8 +1,8 @@
     background yes
     use_xft yes
-    xftfont 123:size=6
+    xftfont 123:size=8
     xftalpha 0.8
-    update_interval 0.50
+    update_interval 3600
     total_run_times 0
     own_window yes
     own_window_type override
@@ -19,8 +19,8 @@
     default_shade_color black
     default_outline_color white
     alignment top_right
-    gap_x 235
-    gap_y 8
+    gap_x 400
+    gap_y 30
     no_buffers yes
     uppercase no
     cpu_avg_samples 2
@@ -29,17 +29,10 @@
     use_spacer yes
     text_buffer_size 256
     draw_graph_borders no
-     
+    color1 goldenrod
+    color2 wheat3
+    color3 goldenrod
      
      
     TEXT
-    ${font}${color wheat3}UPDATE ${color azure} ${stippled_hr}$font${color MintCream}
-    ${execpi 3600 paconky ~/.conky_scripts/repos.paconky}
-     
-     
-    ${execpi 3600 paconky ~/.conky_scripts/aur.paconky}
-    #${voffset 900}
-    #Available Updates $alignr${execi 600 pacman -Qu | wc -l}
-    #${execpi 900 python ~/.conky_scripts/pacman_update.py}
-    #Available Updates $alignr${execi 600 pacman -Qu | wc -l}
-    # Alt update text
+    ${execp ~/.scripts/paconky.sh ~/tmp/repos.paconky}

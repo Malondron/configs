@@ -1,0 +1,7 @@
+#!/bin/bash
+layout=$(setxkbmap -query | grep 'layout' | awk 'END{print $2}')
+if [ $layout == 'us' ] ; then
+   setxkbmap -layout se
+else
+   setxkbmap -layout us
+ fi 
